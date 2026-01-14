@@ -4,7 +4,7 @@
 
 namespace CardGame {
 
-    // 文档 P5: 花色类型定义
+    // 花色类型定义
     enum CardSuitType {
         CST_NONE = -1,
         CST_CLUBS = 0,    // 梅花 (Black)

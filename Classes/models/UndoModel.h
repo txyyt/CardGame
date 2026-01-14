@@ -7,7 +7,7 @@
 
 namespace CardGame {
 
-    // 这是一个纯数据类，用来记录“一步操作”的所有信息
+    // 纯数据类，记录“一步操作”的所有信息
     class UndoModel : public cocos2d::Ref {
     public:
         // 标准的创建方法

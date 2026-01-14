@@ -63,7 +63,7 @@ namespace CardGame {
             this->addChild(suitIcon);
         }
 
-        // --- 5. 触摸事件监听 (新增部分) ---
+        // 触摸事件监听 
         auto listener = EventListenerTouchOneByOne::create();
         listener->setSwallowTouches(true);
 
@@ -86,14 +86,14 @@ namespace CardGame {
         _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 
         return true;
-    } // <--- initWithModel 结束
+    } 
 
     // 实现设置回调的方法
     void CardView::setClickCallback(std::function<void(CardView*)> callback) {
         _clickCallback = callback;
     }
 
-    // --- 辅助函数 ---
+    // 辅助函数 
     std::string CardView::_getColorName(int suit) {
         if (suit == CST_DIAMONDS || suit == CST_HEARTS) return "red";
         return "black";
@@ -119,4 +119,4 @@ namespace CardGame {
         }
     }
 
-} // <--- 关键！！ 命名空间结束的大括号必须在这里
+} 

@@ -15,13 +15,12 @@ namespace CardGame {
         CardModel* getModel() const { return _model; }
 
         // 点击回调函数
-        // 外部（Controller）通过调用这个方法，告诉 View 被点时该通知谁
         void setClickCallback(std::function<void(CardView*)> callback);
 
     private:
         CardModel* _model;
 
-        // --- 新增：保存回调函数 ---
+        // 保存回调函数
         std::function<void(CardView*)> _clickCallback;
 
         // 私有辅助函数

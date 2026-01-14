@@ -47,9 +47,6 @@ namespace CardGame {
         return true;
     }
 
-    // 记得在析构函数里释放 (虽然这里没写析构函数，建议加上)
-    // GameController::~GameController() { CC_SAFE_RELEASE(_undoManager); }
-
     void GameController::startGame(int levelId, GameView* view) {
         _gameView = view;
         _cards.clear();
@@ -113,14 +110,13 @@ namespace CardGame {
         this->_updateDrawPileVisual();
 
         // --- 5. 添加备用牌堆点击事件 ---
-        // 我们直接把监听器加到 _drawPileNode 上，但是要自己判断点击范围
         auto listener = EventListenerTouchOneByOne::create();
         listener->setSwallowTouches(true);
         listener->onTouchBegan = [this](Touch* t, Event* e) {
             // 如果备用堆没牌了，就不让点
             if (_drawPileModels.empty()) return false;
 
-            // 简单的距离检测：点中 POS_DRAW_PILE 半径 60 像素范围内就算点中
+            // 距离检测：点中 POS_DRAW_PILE 半径 60 像素范围内就算点中
             if (t->getLocation().distance(POS_DRAW_PILE) < 60) {
                 return true;
             }
@@ -140,7 +136,6 @@ namespace CardGame {
 
         // A. 绘制按钮背景 (圆角矩形)
         auto btnBg = DrawNode::create();
-        // 画一个宽160，高60的橙色矩形
         Vec2 rect[] = { Vec2(-80, -30), Vec2(80, -30), Vec2(80, 30), Vec2(-80, 30) };
         btnBg->drawPolygon(rect, 4, Color4F(1.0f, 0.6f, 0.0f, 1.0f), 2, Color4F(1, 1, 1, 1));
         btnNode->addChild(btnBg);
@@ -159,7 +154,7 @@ namespace CardGame {
             // 简单的矩形碰撞检测 (80x30是上面定义的半宽半高)
             if (std::abs(localPos.x) < 80 && std::abs(localPos.y) < 30) {
                 // 按下变色反馈 (变暗)
-                btnBg->setScale(0.95f); // 稍微缩小
+                btnBg->setScale(0.95f); 
                 btnBg->setColor(Color3B(200, 200, 200));
                 return true;
             }
@@ -195,7 +190,7 @@ namespace CardGame {
         newCardView->setScale(0.1f);
         _gameView->addChild(newCardView, 1000);
 
-        // 4. 记录 Undo (你的代码里应该有这部分)
+        // 4. 记录 Undo
         if (_undoManager) {
             _undoManager->pushOperation(newCardModel, POS_DRAW_PILE, 0, _topStackCard);
         }
@@ -307,7 +302,7 @@ namespace CardGame {
 
         UndoModel* op = _undoManager->popLastOperation();
 
-        // 【关键修复 1】手动 retain，防止在动画播放期间对象被自动销毁
+        // 手动 retain，防止在动画播放期间对象被自动销毁
         op->retain();
 
         // 找到对应的 View
@@ -341,7 +336,7 @@ namespace CardGame {
                     this->_drawPileModels.pushBack(op->movedCard);
                     view->removeFromParent();
 
-                    // 【新增】退回来后，刷新一下厚度，让它看起来变厚了
+                    // 退回来后，刷新一下厚度，让它看起来变厚了
                     this->_updateDrawPileVisual();
                 }
 

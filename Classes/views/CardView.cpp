@@ -31,9 +31,9 @@ namespace CardGame {
         // 准备数据字符串
         int suit = model->getSuit();
         int face = model->getFace();
-        std::string color = getColorName(suit); // "red" or "black"
-        std::string faceStr = getFaceName(face); // "A", "2"...
-        std::string suitStr = getSuitName(suit); // "heart"...
+        std::string color = _getColorName(suit); // "red" or "black"
+        std::string faceStr = _getFaceName(face); // "A", "2"...
+        std::string suitStr = _getSuitName(suit); // "heart"...
 
         // 2. 添加中间的大数字 (Big Number)
         // 你的文件命名格式推测为: big_black_A.png
@@ -80,13 +80,13 @@ namespace CardGame {
     }
 
     // 辅助函数实现
-    std::string CardView::getColorName(int suit) {
+    std::string CardView::_getColorName(int suit) {
         // 方块(1) 和 红桃(2) 是红色
         if (suit == CST_DIAMONDS || suit == CST_HEARTS) return "red";
         return "black";
     }
 
-    std::string CardView::getFaceName(int face) {
+    std::string CardView::_getFaceName(int face) {
         switch (face) {
         case 1: return "A";
         case 11: return "J";
@@ -96,7 +96,7 @@ namespace CardGame {
         }
     }
 
-    std::string CardView::getSuitName(int suit) {
+    std::string CardView::_getSuitName(int suit) {
         switch (suit) {
         case CST_CLUBS: return "club";
         case CST_DIAMONDS: return "diamond";

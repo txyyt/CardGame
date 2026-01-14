@@ -51,6 +51,12 @@
     <ClCompile Include="..\Classes\views\CardView.cpp">
       <Filter>src\views</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\views\GameView.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\controllers\GameController.cpp">
+      <Filter>src\controllers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -76,6 +82,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\views\CardView.h">
       <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\views\GameView.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\controllers\GameController.h">
+      <Filter>src\controllers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

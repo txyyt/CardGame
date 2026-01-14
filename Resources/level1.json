@@ -59,7 +59,7 @@
       }
     },
     {
-      "CardFace": 0,
+      "CardFace": 1,
       "CardSuit": 2,
       "Position": {
         "x": 0,

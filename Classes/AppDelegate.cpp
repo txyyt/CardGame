@@ -83,9 +83,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto glview = director->getOpenGLView();
     if (!glview) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-        // 按照文档 P4 要求：窗口大小 1080 * 2080，缩放 0.5 以便在电脑屏幕显示
+        // 窗口大小 1080 * 2080，缩放 0.4 以便在电脑屏幕显示
         // [cite: 90, 94]
-        glview = GLViewImpl::createWithRect("CardGame", cocos2d::Rect(0, 0, 1080, 2080), 0.3f);
+        glview = GLViewImpl::createWithRect("CardGame", cocos2d::Rect(0, 0, 1080, 2080), 0.4f);
 #else
         glview = GLViewImpl::create("CardGame");
 #endif

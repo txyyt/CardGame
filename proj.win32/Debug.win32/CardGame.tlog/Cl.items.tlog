@@ -2,6 +2,7 @@ C:\Users\DELL\Desktop\demo\Project\CardGame\Classes\AppDelegate.cpp;C:\Users\DEL
 C:\Users\DELL\Desktop\demo\Project\CardGame\Classes\configs\LevelConfigLoader.cpp;C:\Users\DELL\Desktop\demo\Project\CardGame\proj.win32\Debug.win32\LevelConfigLoader.obj
 C:\Users\DELL\Desktop\demo\Project\CardGame\Classes\controllers\GameController.cpp;C:\Users\DELL\Desktop\demo\Project\CardGame\proj.win32\Debug.win32\GameController.obj
 C:\Users\DELL\Desktop\demo\Project\CardGame\Classes\HelloWorldScene.cpp;C:\Users\DELL\Desktop\demo\Project\CardGame\proj.win32\Debug.win32\HelloWorldScene.obj
+C:\Users\DELL\Desktop\demo\Project\CardGame\Classes\managers\UndoManager.cpp;C:\Users\DELL\Desktop\demo\Project\CardGame\proj.win32\Debug.win32\UndoManager.obj
 C:\Users\DELL\Desktop\demo\Project\CardGame\Classes\models\CardModel.cpp;C:\Users\DELL\Desktop\demo\Project\CardGame\proj.win32\Debug.win32\CardModel.obj
 C:\Users\DELL\Desktop\demo\Project\CardGame\Classes\views\GameView.cpp;C:\Users\DELL\Desktop\demo\Project\CardGame\proj.win32\Debug.win32\GameView.obj
 C:\Users\DELL\Desktop\demo\Project\CardGame\Classes\views\CardView.cpp;C:\Users\DELL\Desktop\demo\Project\CardGame\proj.win32\Debug.win32\CardView.obj

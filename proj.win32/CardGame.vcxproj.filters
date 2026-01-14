@@ -42,8 +42,14 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="LevelConfigLoader.cpp">
+    <ClCompile Include="..\Classes\configs\LevelConfigLoader.cpp">
       <Filter>src\configs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\models\CardModel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\views\CardView.cpp">
+      <Filter>src\views</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,11 +62,20 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="LevelConfig.h">
+    <ClInclude Include="GameConstants.h">
       <Filter>src\configs</Filter>
     </ClInclude>
-    <ClInclude Include="LevelConfigLoader.h">
+    <ClInclude Include="..\Classes\configs\LevelConfig.h">
       <Filter>src\configs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\configs\LevelConfigLoader.h">
+      <Filter>src\configs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\models\CardModel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\views\CardView.h">
+      <Filter>src\views</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

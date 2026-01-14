@@ -361,3 +361,23 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Visual Studio 2022 specific
+.vs/
+out/
+*.ipch
+*.apfs
+*.user
+*.suo
+*.opensdf
+*.sdf
+
+# Build results
+proj.win32/Debug.win32/
+proj.win32/Release.win32/
+bin/
+temp/
+obj/
+
+# Cocos generated
+cocos2d/cocos/prebuilt-mk/
